@@ -1,12 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pacman</title>
 </head>
-<body>
-    <h1>Hello</h1>
-    
+
+<body style="margin: 0px; background: black;">
+    <div style="display: flex; align-items: center; justify-content: center">
+        <h1 style="color: rgb(78, 195, 125); ;">Pacman</h1>
+       
+    </div>
+     <p style="color: blueviolet; justify-content: center; display: flex; margin: 0px;">game web 0.1
+        </p>
+
+    <canvas id="canvas" width="500" height="500"></canvas>
+    <div style="display: none;">
+        <img id="animations-icon" src="/assets/animations.gif" alt="">
+        <img id="ghost" src="/assets/ghost.png" alt="">
+    </div>
+
+    <script src="ghost.js"></script>
+    <script src="pacman.js"></script>
+    <script src="game.js"></script>
+
 </body>
+
 </html>
