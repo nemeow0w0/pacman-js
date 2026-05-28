@@ -12,11 +12,11 @@ let createRect = (x, y, width, height, color) => {
 }
 
 let fps = 30
-let oneblockSize = 20
+let oneBlockSize = 20
 let score = 0
 let ghots = []
-let wallSpaceWidth = oneblockSize / 1.6
-let walloffset = (oneblockSize - wallSpaceWidth) / 2
+let wallSpaceWidth = oneBlockSize / 1.6
+let walloffset = (oneBlockSize - wallSpaceWidth) / 2
 let wallinnerColor = 'black'
 
 
