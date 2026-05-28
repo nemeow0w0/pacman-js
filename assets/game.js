@@ -19,6 +19,11 @@ let wallSpaceWidth = oneblockSize / 1.6
 let walloffset = (oneblockSize - wallSpaceWidth) / 2
 let wallinnerColor = 'black'
 
+
+const DIRECTION_RIGHT = 4
+const DIRECTION_UP = 3
+const DIRECTION_LEFT = 2
+const DIRECTION_BUTTOM = 1
 let map = [
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
     [1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1],
