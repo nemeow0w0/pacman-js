@@ -88,12 +88,12 @@ class Pacman {
 
     getMapXRightSide() {
         // code
-        let mapX = parseInt((this.x *0.99 + oneBlockSize) /oneBlockSize)
+        let mapX = parseInt((this.x * 0.99 + oneBlockSize) / oneBlockSize)
         return mapX
     }
     getMapYRightSide() {
         // code
-        let mapY = parseInt((this.y *0.99 + oneBlockSize) /oneBlockSize)
+        let mapY = parseInt((this.y * 0.99 + oneBlockSize) / oneBlockSize)
         return mapY
     }
 
