@@ -59,6 +59,8 @@ let gameloop = () => {
 
 let update = () => {
     // js
+
+    pacman.moveProcess()
 }
 
 
@@ -66,6 +68,7 @@ let draw = () => {
     createRect(0, 0, canvas.width, canvas.height, "black")
     // code js
     drawWall()
+    pacman.draw()
 }
 
 
@@ -78,17 +81,17 @@ let drawWall = () => {
         for (let j = 0; j < map[0].length; j++) {
             if (map[i][j] == 1) {
                 createRect(
-                    j * oneblockSize,
-                    i * oneblockSize,
-                    oneblockSize,
-                    oneblockSize,
+                    j * oneBlockSize,
+                    i * oneBlockSize,
+                    oneBlockSize,
+                    oneBlockSize,
                     "#342DCA"
 
                 )
                 if (j > 0 && map[i][j - 1] == 1) {
                     createRect(
-                        j * oneblockSize,
-                        i * oneblockSize + walloffset,
+                        j * oneBlockSize,
+                        i * oneBlockSize + walloffset,
                         wallSpaceWidth + walloffset,
                         wallSpaceWidth,
                         wallinnerColor
@@ -96,8 +99,8 @@ let drawWall = () => {
                 }
                 if (j < map[0].length - 1 && map[i][j + 1] == 1) {
                     createRect(
-                        j * oneblockSize + walloffset,
-                        i * oneblockSize + walloffset,
+                        j * oneBlockSize + walloffset,
+                        i * oneBlockSize + walloffset,
                         wallSpaceWidth + walloffset,
                         wallSpaceWidth,
                         wallinnerColor
@@ -106,8 +109,8 @@ let drawWall = () => {
 
                 if (i < map.length - 1 && map[i + 1][j] == 1) {
                     createRect(
-                        j * oneblockSize + walloffset,
-                        i * oneblockSize + walloffset,
+                        j * oneBlockSize + walloffset,
+                        i * oneBlockSize + walloffset,
                         wallSpaceWidth,
                         wallSpaceWidth + walloffset,
                         wallinnerColor
@@ -115,8 +118,8 @@ let drawWall = () => {
                 }
                 if (i > 0 && map[i - 1][j] == 1) {
                     createRect(
-                        j * oneblockSize + walloffset,
-                        i * oneblockSize,
+                        j * oneBlockSize + walloffset,
+                        i * oneBlockSize,
                         wallSpaceWidth,
                         wallSpaceWidth + walloffset,
                         wallinnerColor
@@ -126,4 +129,16 @@ let drawWall = () => {
         }
     }
 
+}
+
+
+let creatNewPacman = () => {
+    pacman = new Pacman(
+        oneBlockSize,
+        oneBlockSize,
+        oneBlockSize,
+        oneBlockSize,
+        oneBlockSize / 5
+
+    )
 }

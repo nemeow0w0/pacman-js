@@ -6,6 +6,12 @@ class Pacman {
         this.heigth = height
         this.speed = speed
         this.direction = DIRECTION_RIGHT
+        this.currentFrame = 1
+        this.frameCount = 7
+
+        setInterval(() => {
+            this.changeAnimations()
+        }, 100)
     }
 
 
@@ -66,6 +72,7 @@ class Pacman {
         ) {
             isCollided = true
         }
+        return isCollided
     }
     checkGhotsCollisions() {
         // code
@@ -99,11 +106,18 @@ class Pacman {
 
     changeAnimations() {
         // code
+        this.currentFrame =
+            this.currentFrame == this.frameCount ? 1 : this.currentFrame + 1
     }
 
 
     draw() {
         // code
+        canvasContext.save()
+        canvasContext.translate(
+            - this.x - oneBlockSize / 2,
+            - this.y - oneBlockSize / 2
+        )
     }
 
 
