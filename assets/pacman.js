@@ -1,5 +1,5 @@
 class Pacman {
-    constructor(x, y, widtg, height, speed) {
+    constructor(x, y, width, height, speed) {
         this.x = x
         this.y = y
         this.width = width
@@ -64,7 +64,7 @@ class Pacman {
             parseInt(this.x / oneBlockSize)
             ] == 1 ||
             map[parseInt(this.y / oneBlockSize)][
-            parseInt(thi.x / oneBlockSize + 0.9999)
+            parseInt(this.x / oneBlockSize + 0.9999)
             ] == 1 ||
             map[parseInt(this.y / oneBlockSize + 0.9999)][
             parseInt(this.x / oneBlockSize + 0.9999)

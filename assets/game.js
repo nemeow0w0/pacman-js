@@ -132,7 +132,7 @@ let drawWall = () => {
 }
 
 
-let creatNewPacman = () => {
+let createNewPacman = () => {
     pacman = new Pacman(
         oneBlockSize,
         oneBlockSize,
@@ -142,3 +142,7 @@ let creatNewPacman = () => {
 
     )
 }
+
+
+createNewPacman()
+gameloop()
